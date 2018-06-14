@@ -2,480 +2,66 @@
 <html lang="vi">
 
 <head>
-    <!-- Basic Page Needs
-         ================================================== -->
+    <!-- Basic Page Needs ================================================== -->
     <title>Trang Chủ - Phong Thủy Cổ Điển ThaiKimSa.Com</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
-    <!-- Favicons
-         ================================================== -->
-    <link rel="shortcut icon" href="/thaikimsa/assets/images/favicons/favicon.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/thaikimsa/assets/images/favicons/favicon-120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/thaikimsa/assets/images/favicons/favicon-152.png">
-    <!-- Mobile Specific Metas
-         ================================================== -->
+    
+    <!-- Favicons ================================================== -->
+    <%= favicon_link_tag '/thaikimsa/assets/images/favicons/favicon.png', rel: 'shortcut icon' %>
+    <%= favicon_link_tag '/thaikimsa/assets/images/favicons/favicon-120.png', rel: 'apple-touch-icon', sizes: '120x120' %>
+    <%= favicon_link_tag '/thaikimsa/assets/images/favicons/favicon-150.png', rel: 'apple-touch-icon', type: '150x150' %>
+    
+    <!-- Mobile Specific Metas ================================================== -->
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
-    <!-- Google Web Fonts
-         ================================================== -->
-    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,700,700i,800|Roboto:400,400i" rel="stylesheet">
-    <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:400,500,700,900" />
-    <!-- CSS
-         ================================================== -->
+    
+    <!-- Google Web Fonts ================================================== -->
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:400,500,700,900' %>
+    
+    <!-- CSS ================================================== -->
     <!-- Vendor CSS -->
-    <link href="/thaikimsa/assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="/thaikimsa/assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/thaikimsa/assets/fonts/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-    <link href="/thaikimsa/assets/vendor/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
-    <link href="/thaikimsa/assets/vendor/slick/slick.css" rel="stylesheet">
+    <%= stylesheet_link_tag '/thaikimsa/assets/vendor/bootstrap/css/bootstrap.css' %>
+    <%= stylesheet_link_tag '/thaikimsa/assets/fonts/font-awesome/css/font-awesome.min.css' %>
+    <%= stylesheet_link_tag '/thaikimsa/assets/fonts/simple-line-icons/css/simple-line-icons.css' %>
+    <%= stylesheet_link_tag '/thaikimsa/assets/vendor/magnific-popup/dist/magnific-popup.css' %>
+    <%= stylesheet_link_tag '/thaikimsa/assets/vendor/slick/slick.css' %>
+    
     <!-- Template CSS-->
-    <link href="/thaikimsa/assets/css/style.css" rel="stylesheet">
+    <%= stylesheet_link_tag '/thaikimsa/assets/css/style.css' %>
+    
     <!-- Custom CSS-->
-    <link href="/thaikimsa/assets/css/custom.css" rel="stylesheet">
+    <%= stylesheet_link_tag '/thaikimsa/assets/css/custom.css' %>
 </head>
 
 <body class="template-football">
     <div class="site-wrapper clearfix">
+        
         <div class="site-overlay"></div>
-        <!-- Header
-            ================================================== -->
-        <!-- Header Mobile -->
-        <div class="header-mobile clearfix" id="header-mobile">
-            <div class="header-mobile__logo">
-                <a href="<%= erp_thaikimsa.root_path %>" title="">
-                    <img src="/thaikimsa/assets/images/logo.png"
-                         srcset="/thaikimsa/assets/images/logo@2x.png 2x"
-                         alt="" title="" class="header-mobile__logo-img">
-                </a>
-            </div>
-            <div class="header-mobile__inner">
-                <a id="header-mobile__toggle" class="burger-menu-icon">
-                    <span class="burger-menu-icon__line"></span>
-                </a>
-            </div>
-        </div>
+        
+        <!-- Header Mobile ================================================== -->
+        <%= render "erp/thaikimsa/frontend/modules/header_mobile" %>
+        <!-- Header Mobile End -->
+        
+        
         <!-- Header Desktop -->
-        <header class="header">
-            <!-- Header Top Bar -->
-            <div class="header__top-bar clearfix">
-                <div class="container">
-                    <!-- Account Navigation -->
-                    <ul class="nav-account">
-                        <li class="nav-account__item"><a href="">Liên Hệ</a></li>
-                        <li class="nav-account__item"><a href="">Hướng Dẫn</a></li>
-                        <li class="nav-account__item"><a href="">Phong Thủy</a></li>
-                        <li class="nav-account__item"><a href="">Tử Vi</a></li>
-                        <li class="nav-account__item"><a href="">Trang Chủ</a></li>
-                    </ul>
-                    <!-- Account Navigation / End -->
-                </div>
-            </div>
-            <!-- Header Top Bar / End -->
-            <!-- Header Secondary -->            
-            <div class="header__secondary">
-                <div class="container">                    
-                    <ul class="info-block info-block--header">
-                        <li class="info-block__item info-block__item--contact-secondary">
-                            
-                        </li>
-                        <li class="info-block__item info-block__item--contact-secondary">
-                        </li>
-                    </ul>
-                </div>
-            </div>            
-            <!-- Header Secondary / End -->
-            <!-- Header Primary -->
-            <div class="header__primary">
-                <div class="container">
-                    <div class="header__primary-inner">
-                        <!-- Main Navigation -->
-                        <nav class="main-nav clearfix">
-                            <ul class="main-nav__list">
-                                <li class="active"><%= link_to 'Trang Chủ', erp_thaikimsa.root_path, title: '' %></li>
-                                <li class="">
-                                    <a href="">Giới Thiệu</a>
-                                </li>
-                                <li class="">
-                                    <a href="">Tử Vi</a>
-                                    <ul class="main-nav__sub">
-                                        <li><%= link_to 'Xem Vận Hạn Tử Vi', '', title: '' %></li>
-                                        <li><%= link_to 'Xem Tử Vi Hàng Tháng', '', title: '' %></li>
-                                        <li><%= link_to 'Xem Tử Vi 2018', '', title: '' %></li>
-                                        <li><%= link_to 'Xem Tử Vi 2019', '', title: '' %></li>
-                                        <li><%= link_to 'Xem Ngày Tốt Xấu', '', title: '' %></li>
-                                        <li><%= link_to 'Màu Hợp Mệnh', '', title: '' %></li>
-                                        <li><%= link_to 'Xem tuổi hợp làm ăn', '', title: '' %></li>                                        
-                                    </ul>
-                                </li>
-                                <li class="">
-                                    <a href="">Phong Thủy</a>
-                                    <ul class="main-nav__sub">
-                                        <li><%= link_to 'Kích Hoạt Tài Vận', '', title: '' %></li>
-                                        <li><%= link_to 'Kích Hoạt Kinh Doanh', '', title: '' %></li>
-                                        <li><%= link_to 'Kích Hoạt Hôn Nhân', '', title: '' %></li>
-                                        <li><%= link_to 'Phong Thủy Kinh Doanh', '', title: '' %></li>
-                                    </ul>
-                                </li>
-                                <li class="">
-                                    <a href="">Liên Hệ & Hỗ Trợ</a>
-                                    <ul class="main-nav__sub">
-                                        <li><a href="">Thông Tin Liên Hệ</a></li>
-                                        <li>
-                                            <a href="">Hướng Dẫn Đăng Ký</a>
-                                        </li>
-                                        <li><a href="">Hướng Dẫn Thanh Toán</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!-- Main Navigation / End -->
-                    </div>
-                </div>
-            </div>
-            <!-- Header Primary / End -->
-        </header>
+        <%= render "erp/thaikimsa/frontend/modules/header" %>
         <!-- Header / End -->
-        <!-- Featured Posts Slider
-            ================================================== -->
-        <div class="slick posts posts-slider posts--slider-top-news">
-            <% (0..2).each do |slider| %>
-                <div class="slick__slide">
-                    <div class="posts__item posts__item-has-img posts__item--category-1">
-                        <figure class="posts__thumb">
-                            <img src="/thaikimsa/assets/images/slider.png" alt="">
-                        </figure>
-                    </div>
-                </div>
-            <% end %>
-        </div>
-        <!-- Breaking News -->
-        <div class="marquee-wrapper">
-            <div class="container">
-                <div class="marquee-label">Bài Viết Mới Nhất</div>
-                <div class="marquee" data-startvisible="true" data-duration="18000" data-gap="10" data-duplicated="true">
-                    <ul class="posts posts--inline">
-                        <% (0..2).each do |blog| %>
-                            <li class="posts__item">
-                                <h6 class="posts__title">
-                                    <a href="">Tử Vi Và Phong Thủy Năm Nhâm Thìn 2012</a>
-                                </h6>
-                                <div class="posts__excerpt">Năm Tân Mão trong lịch Hạ (nông lịch) là năm tượng trưng hai hành...</div>
-                            </li>
-                        <% end %>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- Breaking News / End -->
-        <!-- Content
-            ================================================== -->
-        <div class="site-content">
-            <div class="container">
-                <!-- Featured News -->
-                <div class="card card--clean mb-0">
-                    <header class="card__header card__header--has-btn">
-                        <h4>DỊCH VỤ TỬ VI</h4>
-                    </header>
-                    <div class="card__content">
-                        <!-- Slider -->
-                        <div class="slick posts posts-slider posts--slider-var-width">
-                            <div class="slick__slide">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="posts__item posts__item--desc-left posts__item--category-1">
-                                            <a href="" class="posts__link-wrapper">
-                                                <figure class="posts__thumb">
-                                                    <img src="/thaikimsa/assets/images/blog-large.jpg" alt="">
-                                                </figure>
-                                                <div class="posts__inner">
-                                                    <div class="posts__cat">
-                                                        <span class="label posts__cat-label">Xem Tử Vi</span>
-                                                    </div>
-                                                    <h3 class="posts__title blog-title">Dự Đoán Ngày Mới 06-06-2018 Cho 12 Con Giáp</h3>
-                                                    <div class="post-author">
-                                                        <div class="post-author__info">
-                                                            <time datetime="06-06-2018" class="posts__date blog-date">06-06-2018</time>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <% (0..1).each do |blog| %>
-                                    <div class="col-sm-6 col-md-4">
-                                        <div class="posts__item posts__item--desc-left posts__item--category-3">
-                                            <a href="" class="posts__link-wrapper">
-                                                <figure class="posts__thumb">
-                                                    <img src="/thaikimsa/assets/images/blog.png" alt="">
-                                                </figure>
-                                                <div class="posts__inner">
-                                                    <div class="posts__cat">
-                                                        <span class="label posts__cat-label">Xem Tử Vi</span>
-                                                    </div>
-                                                    <h3 class="posts__title blog-title">Dự Đoán Ngày Mới 06-06-2018 Cho 12 Con Giáp</h3>
-                                                    <div class="post-author">
-                                                        <div class="post-author__info">
-                                                            <time datetime="06-06-2018" class="posts__date blog-date">06-06-2018</time>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <% end %>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slider / End -->
-                    </div>
-                </div>
-                <div class="card card--clean mb-0">
-                    <header class="card__header card__header--has-btn">
-                        <h4>DỊCH VỤ PHONG THỦY</h4>
-                    </header>
-                    <div class="card__content">
-                        <!-- Slider -->
-                        <div class="slick posts posts-slider posts--slider-var-width">
-                            <div class="slick__slide">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="posts__item posts__item--desc-left posts__item--category-1">
-                                            <a href="" class="posts__link-wrapper">
-                                                <figure class="posts__thumb">
-                                                    <img src="/thaikimsa/assets/images/blog-large.jpg" alt="">
-                                                </figure>
-                                                <div class="posts__inner">
-                                                    <div class="posts__cat">
-                                                        <span class="label posts__cat-label">Xem Tử Vi</span>
-                                                    </div>
-                                                    <h3 class="posts__title blog-title">Dự Đoán Ngày Mới 06-06-2018 Cho 12 Con Giáp</h3>
-                                                    <div class="post-author">
-                                                        <div class="post-author__info">
-                                                            <time datetime="06-06-2018" class="posts__date blog-date">06-06-2018</time>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <% (0..1).each do |blog| %>
-                                    <div class="col-sm-6 col-md-4">
-                                        <div class="posts__item posts__item--desc-left posts__item--category-3">
-                                            <a href="" class="posts__link-wrapper">
-                                                <figure class="posts__thumb">
-                                                    <img src="/thaikimsa/assets/images/blog.png" alt="">
-                                                </figure>
-                                                <div class="posts__inner">
-                                                    <div class="posts__cat">
-                                                        <span class="label posts__cat-label">Xem Tử Vi</span>
-                                                    </div>
-                                                    <h3 class="posts__title blog-title">Dự Đoán Ngày Mới 06-06-2018 Cho 12 Con Giáp</h3>
-                                                    <div class="post-author">
-                                                        <div class="post-author__info">
-                                                            <time datetime="06-06-2018" class="posts__date blog-date">06-06-2018</time>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <% end %>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Slider / End -->
-                    </div>
-                </div>
-                <!-- Featured News / End -->                
-            </div>
-        </div>
-        <!-- Content / End -->
+        
+        <!-- Content ================================================== -->
+        <%= yield %>
+        <!-- Content End -->
+        
     </div>
-    <!-- Footer
-         ================================================== -->
-    <footer id="footer" class="footer">
-        <!-- Footer Widgets -->
-        <div class="footer-widgets">
-            <div class="footer-widgets__inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-4">
-                            <div class="footer-col-inner">
-                                <!-- Footer Logo -->
-                                <div class="footer-logo footer-logo--has-txt">
-                                    <a href="index.html">
-                                        <img src="/thaikimsa/assets/images/logo-footer.png" srcset="/thaikimsa/assets/images/logo-footer@2x.png" alt="" class="footer-logo__img">
-                                        <div class="footer-logo__heading">
-                                            <h5 class="footer-logo__txt">Thái Kim Sa</h5>
-                                            <span class="footer-logo__tagline">
-                                                Phong Thủy Của Bạn
-                                            </span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <!-- Footer Logo / End -->
-                                <!-- Widget: Contact Info -->
-                                <div class="widget widget--footer widget-contact-info">
-                                    <div class="widget__content">
-                                        <div class="widget-contact-info__body info-block">
-                                            <div class="info-block__item info-block__item-footer">
-                                                <h6 class="info-block__heading">Địa Chỉ</h6>
-                                                <a class="info-block__link" href="">Chung cư Minh Thành 259 Lê Văn Lương, Tân Quy, Quận 7, Hồ Chí Minh</a>
-                                            </div>
-                                            <div class="info-block__item info-block__item-footer">
-                                                <h6 class="info-block__heading">Số Điện Thoại</h6>
-                                                <a class="info-block__link" href="tel:info@alchemists.com">0933 808 368</a>
-                                            </div>
-                                            <div class="info-block__item info-block__item-footer">
-                                                <h6 class="info-block__heading">Địa Chỉ Email</h6>
-                                                <a class="info-block__link" href="mailto:thaikimsa@gmail.com">thaikimsa@gmail.com</a>
-                                            </div>
-                                            <div class="info-block__item info-block__item--nopadding">
-                                                <ul class="social-links">
-                                                    <li class="social-links__item facebook">
-                                                        <a href="" class="social-links__link">
-                                                            <i class="fa fa-facebook"></i>
-                                                            Facebook
-                                                        </a>
-                                                    </li>
-                                                    <li class="social-links__item twitter">
-                                                        <a href="" class="social-links__link">
-                                                            <i class="fa fa-twitter"></i>
-                                                            Twitter
-                                                        </a>
-                                                    </li>
-                                                    <li class="social-links__item google-plus">
-                                                        <a href="" class="social-links__link">
-                                                            <i class="fa fa-google-plus"></i>
-                                                            Google+
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Widget: Contact Info / End -->
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4">
-                            <div class="footer-col-inner">
-                                <!-- Widget: Popular Posts / End -->
-                                <div class="widget widget--footer widget-popular-posts">
-                                    <h4 class="widget__title">Dịch Vụ Xem Tử Vi</h4>
-                                    <div class="widget__content">
-                                        <ul class="posts posts--simple-list posts--simple-list-numbered">
-                                            <% (0..2).each do |blog| %>
-                                                <li class="posts__item posts__item--category-1">
-                                                    <div class="posts__inner">
-                                                        <div class="posts__cat">
-                                                            <span class="label posts__cat-label">Tử Vi</span>
-                                                        </div>
-                                                        <h6 class="posts__title">
-                                                            <%= link_to 'Dự đoán ngày mới 06-06-2018 cho 12 con giáp', '', title: '' %>                                                            
-                                                        </h6>
-                                                        <time datetime="2018-09-22" class="posts__date">06-06-2018</time>
-                                                    </div>
-                                                </li>
-                                            <% end %>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- Widget: Popular Posts / End -->
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4">
-                            <div class="footer-col-inner">
-                                <!-- Widget: Popular Posts / End -->
-                                <div class="widget widget--footer widget-popular-posts">
-                                    <h4 class="widget__title">Dịch Vụ Xem Phong Thủy</h4>
-                                    <div class="widget__content">
-                                        <ul class="posts posts--simple-list posts--simple-list-numbered">
-                                            <% (0..2).each do |blog| %>
-                                                <li class="posts__item posts__item--category-1">
-                                                    <div class="posts__inner">
-                                                        <div class="posts__cat">
-                                                            <span class="label posts__cat-label">Phong Thủy</span>
-                                                        </div>
-                                                        <h6 class="posts__title">
-                                                            <%= link_to 'Dự đoán ngày mới 06-06-2018 cho 12 con giáp', '', title: '' %>                                                            
-                                                        </h6>
-                                                        <time datetime="2018-09-22" class="posts__date">06-06-2018</time>
-                                                    </div>
-                                                </li>
-                                            <% end %>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- Widget: Popular Posts / End -->
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-12">
-                            <div class="footer-col-inner">
-                                <!-- Widget: Tagcloud -->
-                                <div class="widget widget--footer widget-tagcloud">
-                                    <h4 class="widget__title">Tags Nổi Bật</h4>
-                                    <div class="widget__content">
-                                        <div class="tagcloud">
-                                            <% (0..3).each do |tag| %>
-                                                <a href="" class="btn btn-default btn-xs btn-outline btn-sm">xem tử vi</a>
-                                                <a href="" class="btn btn-default btn-xs btn-outline btn-sm">xem phong thủy</a>
-                                                <a href="" class="btn btn-default btn-xs btn-outline btn-sm">kích hoạt tài vận</a>
-                                                <a href="" class="btn btn-default btn-xs btn-outline btn-sm">tử vi 2018</a>
-                                                <a href="" class="btn btn-default btn-xs btn-outline btn-sm">tử vi theo tuổi</a>
-                                            <% end %>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Widget: Tagcloud / End -->
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer Widgets / End -->
-        <!-- Footer Secondary -->
-        <div class="footer-secondary">
-            <div class="container">
-                <div class="footer-secondary__inner">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="footer-copyright">
-                                <%= link_to 'Thái Kim Sa', erp_thaikimsa.root_path, title: '' %>&nbsp;
-                                &copy;&nbsp;2018&nbsp;|&nbsp;All Rights Reserved.
-                            </div>
-                        </div>
-                        <div class="col-md-8">
-                            <ul class="footer-nav footer-nav--right footer-nav--sm">
-                                <li class="footer-nav__item"><a href="">Trang Chủ</a></li>
-                                <li class="footer-nav__item"><a href="">Tử Vi</a></li>
-                                <li class="footer-nav__item"><a href="">Phong Thủy</a></li>
-                                <li class="footer-nav__item"><a href="">Hướng Dẫn</a></li>
-                                <li class="footer-nav__item"><a href="">Liên Hệ</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer Secondary / End -->
-    </footer>
-    <!-- Footer / End -->
-    <!-- Javascript Files
-         ================================================== -->
-    <!-- Core JS -->
-    <script src="/thaikimsa/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="/thaikimsa/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="/thaikimsa/assets/js/core.js"></script>
-    <!-- Vendor JS -->
-    <script src="/thaikimsa/assets/vendor/jquery-duotone/jquery.duotone.min.js"></script>
-    <script src="/thaikimsa/assets/vendor/marquee/jquery.marquee.min.js"></script>
-    <!-- Template JS -->
-    <script src="/thaikimsa/assets/js/init.js"></script>
-    <script src="/thaikimsa/assets/js/custom.js"></script>
+    
+    <!-- Footer ================================================== -->
+    <%= render "erp/thaikimsa/frontend/modules/footer" %>
+    <!-- Footer End -->
+    
+    <!-- Javascript Files ================================================== -->
+    <%= render "erp/thaikimsa/frontend/modules/javascripts" %>
 </body>
 
 </html>

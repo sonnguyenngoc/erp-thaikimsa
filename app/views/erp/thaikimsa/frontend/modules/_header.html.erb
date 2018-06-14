@@ -1,0 +1,100 @@
+<header class="header">
+    <!-- Header Top Bar -->
+    <div class="header__top-bar clearfix">
+        <div class="container">
+            <!-- Account Navigation -->
+            <ul class="nav-account">
+                <li class="nav-account__item"><%= link_to 'Liên Hệ', erp_thaikimsa.contact_us_path, title: '' %></li>
+                <li class="nav-account__item"><%= link_to 'Hỗ Trợ', erp_thaikimsa.guide_path, title: '' %></li>
+                <li class="nav-account__item"><%= link_to 'Phong Thủy', erp_thaikimsa.article_listing_path, title: '' %></li>
+                <li class="nav-account__item"><%= link_to 'Tử Vi', erp_thaikimsa.article_listing_path, title: '' %></li>
+                <li class="nav-account__item"><%= link_to 'Trang Chủ', erp_thaikimsa.root_path, title: '' %></li>
+            </ul>
+            <!-- Account Navigation / End -->
+        </div>
+    </div>
+    <!-- Header Top Bar / End -->
+    <!-- Header Secondary -->            
+    <div class="header__secondary" onclick="location.href='/'">
+        <div class="container">                    
+            <ul class="info-block info-block--header">
+                <li class="info-block__item info-block__item--contact-secondary">
+                    
+                </li>
+                <li class="info-block__item info-block__item--contact-secondary">
+                </li>
+            </ul>
+        </div>
+    </div>            
+    <!-- Header Secondary / End -->
+    <!-- Header Primary -->
+    <div class="header__primary">
+        <div class="container">
+            <div class="header__primary-inner">
+                <!-- Main Navigation -->
+                <nav class="main-nav clearfix">
+                    <ul class="main-nav__list">
+                        <li class="active">
+                            <%= link_to 'Trang Chủ', erp_thaikimsa.root_path, title: '' %>
+                            <ul class="main-nav__sub">
+                                <li><%= link_to 'Giới Thiệu', erp_thaikimsa.about_us_path, title: '' %></li>
+                                <li><%= link_to 'Liên Hệ', erp_thaikimsa.contact_us_path, title: '' %></li>
+                                <li><%= link_to 'Hỗ Trợ', erp_thaikimsa.guide_path, title: '' %></li>                                      
+                            </ul>
+                        </li>
+                        <li class="">
+                            <%= link_to 'Tử Vi', erp_thaikimsa.article_listing_path, title: '' %>
+                            <ul class="main-nav__sub">
+                                <li><%= link_to 'Xem Vận Hạn Tử Vi', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Xem Tử Vi Hàng Tháng', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Xem Tử Vi 2018', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Xem Tử Vi 2019', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Xem Ngày Tốt Xấu', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Màu Hợp Mệnh', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Xem Tuổi Hợp Làm Ăn', erp_thaikimsa.article_listing_path, title: '' %></li>                                        
+                            </ul>
+                        </li>
+                        <li class="">
+                            <%= link_to 'Phong Thủy', erp_thaikimsa.article_listing_path, title: '' %>
+                            <ul class="main-nav__sub">
+                                <li><%= link_to 'Kích Hoạt Tài Vận', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Kích Hoạt Kinh Doanh', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Kích Hoạt Hôn Nhân', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Phong Thủy Kinh Doanh', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Phong Thủy Kinh Doanh', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Xem Phong Thủy', erp_thaikimsa.article_listing_path, title: '' %></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <%= link_to 'Kiến Thức Phong Thủy', erp_thaikimsa.article_listing_path, title: '' %>
+                            <ul class="main-nav__sub">
+                                <li><%= link_to 'Kích Hoạt Tài Vận', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Kích Hoạt Kinh Doanh', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Kích Hoạt Hôn Nhân', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Phong Thủy Kinh Doanh', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Phong Thủy Kinh Doanh', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Xem Phong Thủy', erp_thaikimsa.article_listing_path, title: '' %></li>
+                            </ul>
+                        </li>
+                        <li class=""><%= link_to 'Đào Tạo', erp_thaikimsa.article_listing_path, title: '' %></li>
+                        <li class="">
+                            <%= link_to 'Kiến Thức', erp_thaikimsa.article_listing_path, title: '' %>
+                            <ul class="main-nav__sub">
+                                <li><%= link_to 'Kiến Thức Phong Thủy', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Kiến Thức Tử Vi', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Nhân Tướng Học', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Kiến Thức Tứ Trụ - Bát Tự', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Nghi Lễ', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Tâm Linh', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Pháp Cụ', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Kiến Thức Phổ Thông', erp_thaikimsa.article_listing_path, title: '' %></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Main Navigation / End -->
+            </div>
+        </div>
+    </div>
+    <!-- Header Primary / End -->
+</header>

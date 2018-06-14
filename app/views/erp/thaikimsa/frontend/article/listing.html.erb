@@ -1,0 +1,77 @@
+<div class="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <h1 class="page-heading__title">Tử Vi</h1>
+                <ol class="page-heading__breadcrumb breadcrumb">
+                    <li class="breadcrumb-item">
+                        <%= link_to 'Trang Chủ', erp_thaikimsa.root_path, title: '' %>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Tử Vi</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Page Heading / End -->
+<!-- Content
+		================================================== -->
+<div class="site-content">
+    <div class="container">
+        <div class="row">
+            <!-- Content -->
+            <div class="content col-md-12">
+                <!-- Posts Grid -->
+                <div class="posts posts--cards post-grid post-grid--masonry row">
+                    <% (0..11).each do |article| %>
+                        <div class="post-grid__item col-sm-4 ">
+                            <div class="posts__item posts__item--card posts__item--category-1 card artilce-listing">
+                                <figure class="posts__thumb">
+                                    <div class="posts__cat">
+                                        <span class="label posts__cat-label">
+                                            Tử Vi
+                                        </span>
+                                    </div>
+                                    <%= link_to image_tag('/thaikimsa/assets/images/blog-large.jpg', alt: '', title: ''), erp_thaikimsa.article_detail_path, title: '' %>
+                                </figure>
+                                <div class="posts__inner card__content">
+                                    <h6 class="posts__title">
+                                        <%= link_to 'Dự đoán ngày mới 06-06-2018 cho 12 con giáp', erp_thaikimsa.article_detail_path, title: '' %>
+                                    </h6>
+                                </div>
+                                <footer class="posts__footer card__footer">
+                                    <div class="post-author">
+                                        <figure class="post-author__avatar">
+                                            <img src="/thaikimsa/assets/images/favicons/favicon.png" alt="">
+                                        </figure>
+                                        <div class="post-author__info">
+                                            <h4 class="post-author__name">Thái Kim Sa</h4>
+                                        </div>                                    
+                                    </div>
+                                    <ul class="post__meta meta">
+                                        <li class="meta__item meta__item--views">06-06-2018</li>
+                                    </ul>
+                                </footer>
+                            </div>
+                        </div>
+                    <% end %>                  
+                </div>
+                <!-- Post Grid / End -->
+                <!-- Post Pagination -->
+                <nav class="post-pagination" aria-label="Blog navigation">
+                    <ul class="pagination pagination--lg justify-content-center">
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><span class="page-link">...</span></li>
+                        <li class="page-item"><a class="page-link" href="#">16</a></li>
+                    </ul>
+                </nav>
+                <!-- Post Pagination / End -->
+            </div>
+            <!-- Content / End -->
+        </div>
+    </div>
+</div>
+<!-- Content / End -->
+</div>
