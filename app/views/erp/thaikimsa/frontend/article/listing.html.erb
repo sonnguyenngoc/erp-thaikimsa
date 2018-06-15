@@ -23,7 +23,7 @@
             <div class="content col-md-12">
                 <!-- Posts Grid -->
                 <div class="posts posts--cards post-grid post-grid--masonry row">
-                    <% (0..11).each do |article| %>
+                    <% (0..8).each do |article| %>
                         <div class="post-grid__item col-sm-4 ">
                             <div class="posts__item posts__item--card posts__item--category-1 card artilce-listing">
                                 <figure class="posts__thumb">
@@ -33,6 +33,36 @@
                                         </span>
                                     </div>
                                     <%= link_to image_tag('/thaikimsa/assets/images/blog-large.jpg', alt: '', title: ''), erp_thaikimsa.article_detail_path, title: '' %>
+                                </figure>
+                                <div class="posts__inner card__content">
+                                    <h6 class="posts__title">
+                                        <%= link_to 'Dự đoán ngày mới 06-06-2018 cho 12 con giáp', erp_thaikimsa.article_detail_path, title: '' %>
+                                    </h6>
+                                </div>
+                                <footer class="posts__footer card__footer">
+                                    <div class="post-author">
+                                        <figure class="post-author__avatar">
+                                            <img src="/thaikimsa/assets/images/favicons/favicon.png" alt="">
+                                        </figure>
+                                        <div class="post-author__info">
+                                            <h4 class="post-author__name">Thái Kim Sa</h4>
+                                        </div>                                    
+                                    </div>
+                                    <ul class="post__meta meta">
+                                        <li class="meta__item meta__item--views">06-06-2018</li>
+                                    </ul>
+                                </footer>
+                            </div>
+                        </div>
+                        <div class="post-grid__item col-sm-4 ">
+                            <div class="posts__item posts__item--card posts__item--category-1 card artilce-listing">
+                                <figure class="posts__thumb">
+                                    <div class="posts__cat">
+                                        <span class="label posts__cat-label">
+                                            Tử Vi
+                                        </span>
+                                    </div>
+                                    <%= link_to image_tag('/thaikimsa/assets/images/blog-large-01.jpg', alt: '', title: ''), erp_thaikimsa.article_detail_path, title: '' %>
                                 </figure>
                                 <div class="posts__inner card__content">
                                     <h6 class="posts__title">
