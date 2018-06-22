@@ -8,12 +8,11 @@
                         <div class="footer-col-inner">
                             <!-- Footer Logo -->
                             <div class="footer-logo footer-logo--has-txt">
-                                <a href="index.html">
-                                    <img src="/thaikimsa/assets/images/logo-footer.png" srcset="/thaikimsa/assets/images/logo-footer@2x.png" alt="" class="footer-logo__img">
+                                <a href="<%= erp_thaikimsa.root_path %>">
                                     <div class="footer-logo__heading">
                                         <h5 class="footer-logo__txt">Thái Kim Sa</h5>
                                         <span class="footer-logo__tagline">
-                                            Tử Vi Và Phong Thủy Cổ Điển
+                                            Tử Vi Tổng Hợp - Phong Thủy Tam Nguyên Cổ Điển
                                         </span>
                                     </div>
                                 </a>
@@ -24,39 +23,13 @@
                                 <div class="widget__content">
                                     <div class="widget-contact-info__body info-block">
                                         <div class="info-block__item info-block__item-footer">
-                                            <h6 class="info-block__heading">Địa Chỉ</h6>
-                                            <a class="info-block__link" href="">Chung cư Minh Thành 259 Lê Văn Lương, Tân Quy, Quận 7, Hồ Chí Minh</a>
-                                        </div>
-                                        <div class="info-block__item info-block__item-footer">
                                             <h6 class="info-block__heading">Số Điện Thoại</h6>
                                             <a class="info-block__link" href="tel:info@alchemists.com">0933 808 368</a>
                                         </div>
                                         <div class="info-block__item info-block__item-footer">
                                             <h6 class="info-block__heading">Địa Chỉ Email</h6>
                                             <a class="info-block__link" href="mailto:thaikimsa@gmail.com">thaikimsa@gmail.com</a>
-                                        </div>
-                                        <div class="info-block__item info-block__item--nopadding">
-                                            <ul class="social-links">
-                                                <li class="social-links__item facebook">
-                                                    <a href="" class="social-links__link">
-                                                        <i class="fa fa-facebook"></i>
-                                                        Facebook
-                                                    </a>
-                                                </li>
-                                                <li class="social-links__item twitter">
-                                                    <a href="" class="social-links__link">
-                                                        <i class="fa fa-twitter"></i>
-                                                        Twitter
-                                                    </a>
-                                                </li>
-                                                <li class="social-links__item google-plus">
-                                                    <a href="" class="social-links__link">
-                                                        <i class="fa fa-google-plus"></i>
-                                                        Google+
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        </div>                                        
                                     </div>
                                 </div>
                             </div>
@@ -67,22 +40,30 @@
                         <div class="footer-col-inner">
                             <!-- Widget: Popular Posts / End -->
                             <div class="widget widget--footer widget-popular-posts">
-                                <h4 class="widget__title">Dịch Vụ Xem Tử Vi</h4>
+                                <h4 class="widget__title">Liên Kết Nhanh</h4>
                                 <div class="widget__content">
                                     <ul class="posts posts--simple-list posts--simple-list-numbered">
-                                        <% (0..2).each do |blog| %>
-                                            <li class="posts__item posts__item--category-1">
-                                                <div class="posts__inner">
-                                                    <div class="posts__cat">
-                                                        <span class="label posts__cat-label">Tử Vi</span>
-                                                    </div>
-                                                    <h6 class="posts__title">
-                                                        <%= link_to 'Dự đoán ngày mới 06-06-2018 cho 12 con giáp', '', title: '' %>                                                            
-                                                    </h6>
-                                                    <time datetime="2018-09-22" class="posts__date">06-06-2018</time>
-                                                </div>
-                                            </li>
-                                        <% end %>
+                                        <li class="posts__item posts__item--category-1">
+                                            <div class="posts__inner">
+                                                <h6 class="posts__title">
+                                                    <%= link_to 'Dịch Vụ Xem Tử Vi', erp_thaikimsa.register_01_path, title: 'Dịch Vụ Xem Tử Vi' %>                                                            
+                                                </h6>
+                                            </div>
+                                        </li>
+                                        <li class="posts__item posts__item--category-1">
+                                            <div class="posts__inner">
+                                                <h6 class="posts__title">
+                                                    <%= link_to 'Dịch Vụ Xem Phong Thủy', erp_thaikimsa.register_02_path, title: 'Dịch Vụ Xem Phong Thủy' %>                                                            
+                                                </h6>
+                                            </div>
+                                        </li>
+                                        <li class="posts__item posts__item--category-1">
+                                            <div class="posts__inner">
+                                                <h6 class="posts__title">
+                                                    <%= link_to 'Kiến Thức', erp_thaikimsa.guide_path, title: 'Kiến Thức' %>                                                            
+                                                </h6>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -93,48 +74,36 @@
                         <div class="footer-col-inner">
                             <!-- Widget: Popular Posts / End -->
                             <div class="widget widget--footer widget-popular-posts">
-                                <h4 class="widget__title">Dịch Vụ Xem Phong Thủy</h4>
+                                <h4 class="widget__title">Thông Tin Website</h4>
                                 <div class="widget__content">
                                     <ul class="posts posts--simple-list posts--simple-list-numbered">
-                                        <% (0..2).each do |blog| %>
-                                            <li class="posts__item posts__item--category-1">
-                                                <div class="posts__inner">
-                                                    <div class="posts__cat">
-                                                        <span class="label posts__cat-label">Phong Thủy</span>
-                                                    </div>
-                                                    <h6 class="posts__title">
-                                                        <%= link_to 'Dự đoán ngày mới 06-06-2018 cho 12 con giáp', '', title: '' %>                                                            
-                                                    </h6>
-                                                    <time datetime="2018-09-22" class="posts__date">06-06-2018</time>
-                                                </div>
-                                            </li>
-                                        <% end %>
+                                        <li class="posts__item posts__item--category-1">
+                                            <div class="posts__inner">
+                                                <h6 class="posts__title">
+                                                    <%= link_to 'Giới Thiệu', '', title: '' %>                                                            
+                                                </h6>
+                                            </div>
+                                        </li>
+                                        <li class="posts__item posts__item--category-1">
+                                            <div class="posts__inner">
+                                                <h6 class="posts__title">
+                                                    <%= link_to 'Liên Hệ', '', title: '' %>                                                            
+                                                </h6>
+                                            </div>
+                                        </li>
+                                        <li class="posts__item posts__item--category-1">
+                                            <div class="posts__inner">
+                                                <h6 class="posts__title">
+                                                    <%= link_to 'Hướng Dẫn', '', title: '' %>                                                            
+                                                </h6>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                             <!-- Widget: Popular Posts / End -->
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-md-12">
-                        <div class="footer-col-inner">
-                            <!-- Widget: Tagcloud -->
-                            <div class="widget widget--footer widget-tagcloud">
-                                <h4 class="widget__title">Tags Nổi Bật</h4>
-                                <div class="widget__content">
-                                    <div class="tagcloud">
-                                        <% (0..3).each do |tag| %>
-                                            <a href="" class="btn btn-default btn-xs btn-outline btn-sm">xem tử vi</a>
-                                            <a href="" class="btn btn-default btn-xs btn-outline btn-sm">xem phong thủy</a>
-                                            <a href="" class="btn btn-default btn-xs btn-outline btn-sm">kích hoạt tài vận</a>
-                                            <a href="" class="btn btn-default btn-xs btn-outline btn-sm">tử vi 2018</a>
-                                            <a href="" class="btn btn-default btn-xs btn-outline btn-sm">tử vi theo tuổi</a>
-                                        <% end %>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Widget: Tagcloud / End -->
-                        </div>
-                    </div>                        
+                    </div>                                        
                 </div>
             </div>
         </div>

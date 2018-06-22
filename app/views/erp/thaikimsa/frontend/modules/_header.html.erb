@@ -1,8 +1,7 @@
 <header class="header">
     <!-- Header Top Bar -->
-    <div class="header__top-bar clearfix">
+    <!--<div class="header__top-bar clearfix">
         <div class="container">
-            <!-- Account Navigation -->
             <ul class="nav-account">
                 <li class="nav-account__item"><%= link_to 'Liên Hệ', erp_thaikimsa.contact_us_path, title: '' %></li>
                 <li class="nav-account__item"><%= link_to 'Hỗ Trợ', erp_thaikimsa.guide_path, title: '' %></li>
@@ -10,21 +9,12 @@
                 <li class="nav-account__item"><%= link_to 'Tử Vi', erp_thaikimsa.article_listing_path, title: '' %></li>
                 <li class="nav-account__item"><%= link_to 'Trang Chủ', erp_thaikimsa.root_path, title: '' %></li>
             </ul>
-            <!-- Account Navigation / End -->
         </div>
-    </div>
+    </div>-->
     <!-- Header Top Bar / End -->
     <!-- Header Secondary -->            
-    <div class="header__secondary" onclick="location.href='/'">
-        <div class="container">                    
-            <ul class="info-block info-block--header">
-                <li class="info-block__item info-block__item--contact-secondary">
-                    
-                </li>
-                <li class="info-block__item info-block__item--contact-secondary">
-                </li>
-            </ul>
-        </div>
+    <div class="header__secondary" onclick="location.href='/'">        
+        <%= image_tag "/thaikimsa/assets/images/main-banner-01.png", alt: "", class: "banner-top-01" %>
     </div>            
     <!-- Header Secondary / End -->
     <!-- Header Primary -->
@@ -35,35 +25,28 @@
                 <nav class="main-nav clearfix">
                     <ul class="main-nav__list">
                         <li class="active">
-                            <%= link_to 'Trang Chủ', erp_thaikimsa.root_path, title: '' %>
+                            <%= link_to 'Trang Chủ', erp_thaikimsa.root_path, title: 'Trang Chủ' %>
                             <ul class="main-nav__sub">
-                                <li><%= link_to 'Giới Thiệu', erp_thaikimsa.about_us_path, title: '' %></li>
-                                <li><%= link_to 'Hỗ Trợ', erp_thaikimsa.guide_path, title: '' %></li>                                      
+                                <li><%= link_to 'Giới Thiệu', erp_thaikimsa.about_us_path, title: 'Giới Thiệu' %></li>
+                                <li><%= link_to 'Hỗ Trợ', erp_thaikimsa.guide_path, title: 'Hỗ Trợ' %></li>                                      
                             </ul>
                         </li>
                         <li class="">
-                            <%= link_to 'Tử Vi', erp_thaikimsa.article_listing_path, title: '' %>
+                            <%= link_to 'Tử Vi', 'javascript:void(0)', title: 'Tử Vi' %>
                             <ul class="main-nav__sub">
-                                <li><%= link_to 'Xem Vận Hạn Tử Vi', erp_thaikimsa.article_listing_path, title: '' %></li>
-                                <li><%= link_to 'Xem Tử Vi Hàng Tháng', erp_thaikimsa.article_listing_path, title: '' %></li>
-                                <li><%= link_to 'Xem Tử Vi 2018', erp_thaikimsa.article_listing_path, title: '' %></li>
-                                <li><%= link_to 'Xem Tử Vi 2019', erp_thaikimsa.article_listing_path, title: '' %></li>
-                                <li><%= link_to 'Xem Ngày Tốt Xấu', erp_thaikimsa.article_listing_path, title: '' %></li>
-                                <li><%= link_to 'Màu Hợp Mệnh', erp_thaikimsa.article_listing_path, title: '' %></li>
-                                <li><%= link_to 'Xem Tuổi Hợp Làm Ăn', erp_thaikimsa.article_listing_path, title: '' %></li>                                        
+                                <li><%= link_to 'Giải Đoán Vận Hạn Năm 2018', erp_thaikimsa.register_01_path, title: 'Giải Đoán Vận Hạn Năm 2018' %></li>
+                                <li><%= link_to 'Giải Đoán Ngày Tháng Vận Hạn Trong Năm 2018', erp_thaikimsa.register_01_path, title: 'Giải Đoán Ngày Tháng Vận Hạn Trong Năm 2018' %></li>
+                                <li><%= link_to 'Chọn Lá Số Tốt Để Sinh Mổ', erp_thaikimsa.register_01_path, title: 'Chọn Lá Số Tốt Để Sinh Mổ' %></li>                                
                             </ul>
                         </li>
                         <li class="">
-                            <%= link_to 'Phong Thủy', erp_thaikimsa.article_listing_path, title: '' %>
+                            <%= link_to 'Phong Thủy Huyền Không Đại Quái', 'javascript:void(0)', title: 'Phong Thủy Huyền Không Đại Quái' %>
                             <ul class="main-nav__sub">
-                                <li><%= link_to 'Kích Hoạt Tài Vận', erp_thaikimsa.article_listing_path, title: '' %></li>
-                                <li><%= link_to 'Kích Hoạt Kinh Doanh', erp_thaikimsa.article_listing_path, title: '' %></li>
-                                <li><%= link_to 'Kích Hoạt Hôn Nhân', erp_thaikimsa.article_listing_path, title: '' %></li>
-                                <li><%= link_to 'Phong Thủy Kinh Doanh', erp_thaikimsa.article_listing_path, title: '' %></li>                                
-                                <li><%= link_to 'Xem Phong Thủy', erp_thaikimsa.article_listing_path, title: '' %></li>
+                                <li><%= link_to 'Chọn Đất Xây Nhà', erp_thaikimsa.article_listing_path, title: 'Chọn Đất Xây Nhà' %></li>
+                                <li><%= link_to 'Thiết Kế Nhà Theo Phong Thủy', erp_thaikimsa.article_listing_path, title: 'Thiết Kế Nhà Theo Phong Thủy' %></li>
+                                <li><%= link_to 'Kích Tài Ngôi Nhà Của Bạn', erp_thaikimsa.article_listing_path, title: 'Kích Tài Ngôi Nhà Của Bạn' %></li>
                             </ul>
                         </li>
-                        <li class=""><%= link_to 'Đào Tạo', erp_thaikimsa.article_listing_path, title: '' %></li>
                         <li class="">
                             <%= link_to 'Kiến Thức', erp_thaikimsa.article_listing_path, title: '' %>
                             <ul class="main-nav__sub">
@@ -77,7 +60,7 @@
                                 <li><%= link_to 'Kiến Thức Phổ Thông', erp_thaikimsa.article_listing_path, title: '' %></li>
                             </ul>
                         </li>
-                        <li class=""><%= link_to 'Liên Hệ', erp_thaikimsa.contact_us_path, title: '' %></li>
+                        <li class=""><%= link_to 'Liên Hệ', erp_thaikimsa.contact_us_path, title: 'Liên Hệ' %></li>
                     </ul>
                 </nav>
                 <!-- Main Navigation / End -->
@@ -85,4 +68,9 @@
         </div>
     </div>
     <!-- Header Primary / End -->
+    <!-- Header Secondary -->            
+    <div class="header__secondary" onclick="location.href='/'">        
+        <%= image_tag "/thaikimsa/assets/images/main-banner-02.png", alt: "", class: "banner-top-01" %>
+    </div>            
+    <!-- Header Secondary / End -->
 </header>

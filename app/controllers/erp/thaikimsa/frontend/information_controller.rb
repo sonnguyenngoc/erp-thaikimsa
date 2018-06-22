@@ -10,6 +10,12 @@ module Erp
         
         def guide          
         end
+        
+        def register_01
+        end
+        
+        def register_02
+        end
       end
     end
   end
