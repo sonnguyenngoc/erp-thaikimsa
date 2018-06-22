@@ -60,7 +60,7 @@
                                         <li class="posts__item posts__item--category-1">
                                             <div class="posts__inner">
                                                 <h6 class="posts__title">
-                                                    <%= link_to 'Kiến Thức', erp_thaikimsa.guide_path, title: 'Kiến Thức' %>                                                            
+                                                    <%= link_to 'Kiến Thức', erp_thaikimsa.article_listing_path, title: 'Kiến Thức' %>                                                            
                                                 </h6>
                                             </div>
                                         </li>
@@ -80,21 +80,21 @@
                                         <li class="posts__item posts__item--category-1">
                                             <div class="posts__inner">
                                                 <h6 class="posts__title">
-                                                    <%= link_to 'Giới Thiệu', '', title: '' %>                                                            
+                                                    <%= link_to 'Giới Thiệu', erp_thaikimsa.about_us_path, title: 'Giới Thiệu' %>                                                            
                                                 </h6>
                                             </div>
                                         </li>
                                         <li class="posts__item posts__item--category-1">
                                             <div class="posts__inner">
                                                 <h6 class="posts__title">
-                                                    <%= link_to 'Liên Hệ', '', title: '' %>                                                            
+                                                    <%= link_to 'Liên Hệ', erp_thaikimsa.contact_us_path, title: 'Liên Hệ' %>
                                                 </h6>
                                             </div>
                                         </li>
                                         <li class="posts__item posts__item--category-1">
                                             <div class="posts__inner">
                                                 <h6 class="posts__title">
-                                                    <%= link_to 'Hướng Dẫn', '', title: '' %>                                                            
+                                                    <%= link_to 'Hướng Dẫn', erp_thaikimsa.guide_path, title: 'Hướng Dẫn' %>                                                            
                                                 </h6>
                                             </div>
                                         </li>
@@ -122,11 +122,11 @@
                     </div>
                     <div class="col-md-8">
                         <ul class="footer-nav footer-nav--right footer-nav--sm">
-                            <li class="footer-nav__item"><a href="">Trang Chủ</a></li>
-                            <li class="footer-nav__item"><a href="">Tử Vi</a></li>
-                            <li class="footer-nav__item"><a href="">Phong Thủy</a></li>
-                            <li class="footer-nav__item"><a href="">Hướng Dẫn</a></li>
-                            <li class="footer-nav__item"><a href="">Liên Hệ</a></li>
+                            <li class="footer-nav__item"><%= link_to 'Trang Chủ', erp_thaikimsa.root_path, title: 'Trang Chủ' %></li>
+                            <li class="footer-nav__item"><%= link_to 'Tử Vi', erp_thaikimsa.register_01_path, title: 'Tử Vi' %></li>
+                            <li class="footer-nav__item"><%= link_to 'Phong Thủy', erp_thaikimsa.register_02_path, title: 'Phong Thủy' %></li>
+                            <li class="footer-nav__item"><%= link_to 'Hướng Dẫn', erp_thaikimsa.guide_path, title: 'Hướng Dẫn' %></li>
+                            <li class="footer-nav__item"><%= link_to 'Liên Hệ', erp_thaikimsa.contact_us_path, title: 'Liên Hệ' %></li>
                         </ul>
                     </div>
                 </div>

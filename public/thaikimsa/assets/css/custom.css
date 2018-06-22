@@ -169,6 +169,7 @@ body {
 }
 .main-nav__sub {
 	top: 50px;
+	min-width: 325px;
 }
 .main-nav__sub, .main-nav__sub-2 {
 	border: 1px solid #fff;
@@ -375,4 +376,7 @@ h3.blog-title {
 }
 .posts--simple-list .posts__item {
 	margin-bottom: 30px;
+}
+.posts__item--desc-left .posts__title {
+	text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 }

@@ -6117,8 +6117,8 @@ input.header-mobile__search-control:focus {
 	margin: 0;
 	padding: 0;
 	min-width: 240px;
-	background-color: #383759;
-	border: 1px solid #3c3b5b;
+	background-color: #fff;
+	border: 1px solid #fff;
 	opacity: 0;
 	transform-origin: 0 0;
 	transition: transform .3s, opacity .3s
